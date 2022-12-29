@@ -11,7 +11,7 @@ export const NewPost = () =>
   const validateSchemaPost = yup.object().shape
   ({
     title: yup.string().required("Required.").min(2, "Min 2 characteres."),
-    content: yup.string().optional()
+    content: yup.string().required()
   })
 
 

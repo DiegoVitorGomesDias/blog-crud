@@ -23,6 +23,6 @@ obs. A API [JSONPlaceholder](https://jsonplaceholder.typicode.com/) foi utilizad
 
 ### Mobile
 
-![Main Screen](./__readme-assets__/home-main-mobile.png)
-![New Post Screen](./__readme-assets__/newpost-mobile.png)
-![View Post Screen](./__readme-assets__/viewpost-mobile.png)
+![Main Screen](./__readme-assets__/home-main-mobile.png =300x570)
+![New Post Screen](./__readme-assets__/newpost-mobile.png =300x570)
+![View Post Screen](./__readme-assets__/viewpost-mobile.png =300x570)

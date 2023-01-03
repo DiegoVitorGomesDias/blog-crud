@@ -26,6 +26,17 @@
   color: white;
 }
 
+body::-webkit-scrollbar { width: 1vw; }
+
+body::-webkit-scrollbar-track {
+  background: #111111f0;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #333;
+  border: 3px solid #333;
+}
+
 h1 { text-align: center; }
 
 a, button { background: none; color: #7fff00; padding: 1vh 1vw; border-radius: 10px; transition: all .1s ease-out;  }
@@ -49,29 +60,27 @@ a:hover:has(img)  { transform: scale(1.05); }
   border-radius: 10px;
 }
 
-#top_header
-{
-  display: flex;
-  flex: 0 1 auto;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  width: 100%;
-  padding: 3vh 3vw 2vh 3vw;
-  border-bottom: 1px solid #fff;
-}
+#top_header { width: 100%; border-bottom: 1px solid #fff; }
+
+  #top_header > .content
+  {
+    display: flex;
+    flex: 0 1 auto;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    padding: 3vh 3vw 2vh 3vw;
+  }
 
   #top_header img
   {
-    max-width: 5vw;
-    max-height: 5vh;
+    max-width: clamp(40px, 5vw, 10vw);
+    max-height: clamp(40px, 5vh, 10vh);
   }
 
-  #top_header nav ul 
-  {
-    display: flex;
-    gap: 1vw;
-  }
+  #top_header nav ul { display: flex; gap: 1vw; }
 
 .container
 {
@@ -80,12 +89,15 @@ a:hover:has(img)  { transform: scale(1.05); }
   padding: 3vh 3vw;
 }
 
+.content { width: clamp(50vw, 80vw, 700px ) }
+
+#home { width: 100%; }
+
 main#posts
 {
   display: flex;
   flex-direction: column;
   gap: 3vh;
-  width: clamp(50vw, 80vw, 700px )
 }
 
 .postCard
@@ -98,8 +110,9 @@ main#posts
 }
 
 .postCard a { padding: 0; }
-.postCard a > h3::first-letter { text-transform: uppercase; }
+:has(.postCard) h3::first-letter, h4::first-letter { text-transform: uppercase; }
 .postCard > p::first-letter { text-transform: uppercase; }
+.postCard > p::after { content: "."; }
 
 .postCard p
 {
@@ -108,6 +121,16 @@ main#posts
   line-break: auto;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.postCard.text p
+{
+  width: auto;
+  height: auto;
+  white-space: normal;
+  line-break: normal;
+  overflow: auto;
+  text-overflow: clip;
 }
 
 #newPost { width: clamp(50vw, 80vw, 700px ); }

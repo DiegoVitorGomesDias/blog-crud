@@ -16,23 +16,32 @@ obs. A API [JSONPlaceholder](https://jsonplaceholder.typicode.com/) foi utilizad
 ### Main Screen
 
 Desktop
+
 ![Main Screen](./__readme-assets__/home-main.png)
 
+
 Mobile
+
 ![Main Screen](./__readme-assets__/home-main-mobile.png)
 
 ### New Post
 
 Desktop
+
 ![New Post Screen](./__readme-assets__/newpost.png)
 
+
 Mobile
+
 ![New Post Screen](./__readme-assets__/newpost-mobile.png)
 
 ### View Post
 
 Desktop
+
 ![View Post Screen](./__readme-assets__/viewpost.png)
 
+
 Mobile
+
 ![View Post Screen](./__readme-assets__/viewpost-mobile.png)
